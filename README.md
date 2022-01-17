@@ -3,7 +3,7 @@
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/rossmann-logo.png?raw=true)
 
 ## 1. Problema de Negócio
-O CFO da empresa fez uma reunião com todos os Gerentes de Loja e pediu para que cada um deles trouxesse uma previsão diária das próximas 6 semanas de vendas.
+O CFO da empresa fez uma reunião com todos os Gerentes de Loja e pediu para que cada um deles trouxesse uma previsão das vendas nas próximas 6 semanas.
 
 Depois dessa reunião, todos os Gerentes de Loja entraram em contato com você, requisitando uma previsão de vendas de sua loja. O seu trabalho é fazer essa previsão.
 
@@ -14,25 +14,25 @@ Depois dessa reunião, todos os Gerentes de Loja entraram em contato com você, 
 
 ### 2.1 Descrição dos atributos
 
-* **Id** - id da loja
-* **Store** - Identificação única para a loja
-* **Sales** - O quanto de venda aquele produto teve diariamente
-* **Customers** - Número de clientes que visitaram a loja naquele dia
-* **Open** - Indicador se a loja está aberta ou fechada (0 = fechada, 1 = aberta)
-* **StateHoliday** - Indica se naquele dia está ocorrendo algum feriado do estado
-* **SchoolHoliday** - Indica se naquele dia está ocorrendo algum feriado escolar
-* **StoreType** - O tipo de loja, divididos em a,b,c e d.
-* **Assortment** - A disposição dos produtos em cada loja, divididos em 3 tipos, a = basic, b = extra e c = extended
-* **CompetitionDistance** - Distancia (em metros) para o competidor mais próximo
-* **CompetitionOpenSince[Month/Year]** - Mês e ano que a competição surgiu. Se eu tenho uma loja agora, daqui a 6 meses abre uma loja nova, tem a data que a competição de iniciou.
-* **Promo** - Indicativo se a loja está participando de uma promoção.
-* **Promo2** - É uma extensão da promoção. As lojas fazem promoções e outras extendem essa promoção por mais tempo. 0 = loja não participando, 1 = loja participando
-* **Promo2Since[Month/Year]** - Indica o tempo que a loja ficou na promoção extendida.
+* **Id** - id da loja;
+* **Store** - Identificação única para a loja;
+* **Sales** - O quanto de venda aquela loja teve diariamente;
+* **Customers** - Número de clientes que visitaram a loja naquele dia;
+* **Open** - Indicador se a loja está aberta ou fechada (0 = fechada, 1 = aberta);
+* **StateHoliday** - Indica se naquele dia está ocorrendo algum feriado do estado;
+* **SchoolHoliday** - Indica se naquele dia está ocorrendo algum feriado escolar;
+* **StoreType** - O tipo de loja, divididos em a,b,c e d;
+* **Assortment** - A disposição dos produtos em cada loja, divididos em 3 tipos, a = basic, b = extra e c = extended;
+* **CompetitionDistance** - Distância (em metros) para o competidor mais próximo;
+* **CompetitionOpenSince[Month/Year]** - Mês e ano que a competição surgiu;
+* **Promo** - Indicativo se a loja está participando de uma promoção;
+* **Promo2** - É uma extensão da promoção. As lojas fazem promoções e outras extendem essa promoção por mais tempo. 0 = loja não participando, 1 = loja participando;
+* **Promo2Since[Month/Year]** - Indica o tempo que a loja ficou na promoção extendida;
 * **PromoInterval** - Intervalo que essas promoções acontecem.
 
 ## 3. Planejamento da Solução
 
-A partir do pedido do CFO e da análise dos dados é possível observar que esta é um claro problema de predição, que será usado um modelo de Machine Learning para solucionar. Depois disso será feito o deploy do modelo no Heroku e poderá ser acessado em qualquer telefone com acesso ao aplicativo Telegram.
+A partir do pedido do CFO e da análise dos dados, é possível observar que este é um claro problema de predição, que será usado um modelo de Machine Learning para solucioná-lo. Depois disso, será feito o deploy do modelo no Heroku, que poderá ser acessado em qualquer telefone com acesso ao aplicativo Telegram ou via requisição da API.
 
 Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Science) , que é um metodo de gerenciamento de projetos para ciência de dados. A vantagem deste método é que entrega-se valor de uma forma mais rápida. O processo consiste nas seguintes etapas:
 
@@ -40,13 +40,13 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 * Neste nosso projeto, os dados vieram do Kaggle: https://www.kaggle.com/c/rossmann-store-sales/data
 
 **1.** Descrição dos Dados
-* A partir de métricas estatísticas encontra-se valores mínimos, máximos, outliers, médias, dados faltantes entre outros problemas que será encontrado durante o projeto.
+* A partir de métricas estatísticas encontra-se valores mínimos, máximos, outliers, médias, dados faltantes entre outros problemas que será enfrentado durante o projeto.
 
 **2.** Engenharia de Atributos
 * Nesta etapa será encontrado novos atributos a partir das variáveis originais, de forma que melhore a análise exploratória de dados. Além disso, cria-se hipóteses que serão validadas (ou rejeitadas) na análise.
 
 **3.** Filtragem de Dados
-* A principal motivação para realizar este passo é por restrição de negócios. Alguns atributos pode impactar no resultado, porém, não estarão disponíveis antes do modelo em produção.
+* A principal motivação para realizar este passo é por restrição de negócios. Alguns atributos podem impactar no resultado, porém, não estarão disponíveis antes do modelo em produção.
 
 **4.** Análise Exploratória de Dados
 * O objetivo de uma análise exploratória de dados (EDA - do inglês: Exploratory Data Analysis) é entender como as variáveis impactam no fenômeno a ser modelado e encontrar insights que ajudem a solucionar o problema. 
@@ -58,7 +58,7 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 * Nesta etapa será selecionado as variáveis mais relevantes para o modelo. Aqui foi utilizado o Algoritmo Boruta.
 
 **7.** Modelos de Aprendizagem de Máquina
-* Seleciona-se alguns algoritmos de aprendizagem de máquina e realiza o treinamento e teste para observar qual modelo performa melhor.
+* Seleciona-se alguns algoritmos de aprendizagem de máquina e realiza o treinamento e o teste para observar qual modelo performa melhor.
 
 **8.** Ajuste Fino de Hiperparâmetros
 * Ajuste dos hiperparâmetros de forma que o modelo de aprendizado de máquina performe ainda melhor.
@@ -83,7 +83,7 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/insight2.png?raw=true)
 
-Pela lógica, se o competidor estiver mais próximo, a loja venderia menos. Porém, pelos dados, lojas com competidores mais próximos vendem MAIS. Isto é completamente contra qualquer senso comum.
+Pela lógica, se o competidor estiver mais próximo, a loja venderia menos. Porém, pelos dados, lojas com competidores mais próximos vendem mais. Isto é completamente contra qualquer senso comum.
 
 **3.** Lojas com mais promoções consecutivas deveriam vender mais.
 * Falsa Lojas com mais promoções consecutivas vendem menos.
@@ -119,7 +119,7 @@ Os modelos utilizados neste passo foram:
 * Random Forest Regressor
 * XGBoost Regressor
 
-Ou seja, uma média para servir de base de comparação, dois modelos lineares e dois não-lineares.
+Ou seja, uma média, para servir de base de comparação, dois modelos lineares e dois não-lineares.
 
 ## 6. Performance dos modelos de machine learning
 
@@ -127,7 +127,7 @@ Como o problema tem uma ordem cronológica, é importante utilizar a técnica de
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/modelos_cv.png?raw=true)
 
-O primeiro ponto a ser observado é que estamos lidando com um problema não linear, uma vez que o melhor resultado foi encontrado usando o modelo de Random Forest. Mesmo a RF sendo o melhor modelo encontrado, aqui, será utilizado o modelo XGBoost. A princípio causa uma estranheza o modelo escolhido ser o que performou pior, porém, vale salientar que uma RF consome muito mais capacidade computacional que qualquer outro modelo, de forma que vale o risco de fazer os ajustes finos de uma XGBoost e observar como ela se comporta. É importante lembrar que está sendo utilizado o método CRIPS-DS, então, caso não seja encontrado um resultado satisfatório, em um próximo cíclo será utilizado o modelo de RF. 
+O primeiro ponto a ser observado é que este é um problema não linear, uma vez que o melhor resultado foi encontrado usando o modelo de Random Forest. Mesmo a RF tendo o melhor resultado, aqui, será utilizado o modelo XGBoost. A princípio pode causar uma estranheza o modelo escolhido ser o que performou pior, porém, vale salientar que uma RF consome muito mais capacidade computacional que qualquer outro modelo, de forma que vale o risco de fazer os ajustes finos de uma XGBoost e observar como ela se comporta. É importante lembrar que está sendo utilizado o método CRIPS-DS, então, caso não seja encontrado um resultado satisfatório, em um próximo cíclo será utilizado o modelo de RF. 
 
 ## 7. Performance após ajuste fino dos hiperparâmetros (Hyperparameter Fine Tuning)
 Após a aplicação do Algoritmo Boruta para definir os melhores hiperparâmetros o resultado foi o seguinte
@@ -151,8 +151,8 @@ O gráfico abaixo mostra, para cada loja, o erro percentual e a predição. É p
 
 * Em (1,1), é possível ver que as predições das lojas estão bem próximas do resultado de teste ao longo do tempo, o que é um indicativo que o modelo performou bem.
 * Em (1,2) é a porcentagem das previsões em relação a venda, a error_rate. Acima da linha 1, o modelo superestiou o resultado, abaixo ele subestimou.
-* Em (2,1) vê-se que o erro tem uma distribuição bem próxima de uma normal, isso é importante pois é um indicativo que os erros estão bem próximos de 0.
-* Em (2,2) é possível ver que previsões entre valores de 5k e 10k tem os maiores erros. Em termos da análise de resíduo, o modelo está como um "tubo" exceto por alguns outliers, o que a teoria dos resíduos indica como sendo o melhor resultado.
+* Em (2,1) vê-se que o erro tem uma distribuição bem próxima de uma normal, isso é importante pois é um indicativo que os erros estão próximos de 0.
+* Em (2,2) é possível ver que previsões entre valores de 5k e 10k tem os maiores erros. Em termos da análise de resíduo, o modelo está como um "tubo" na maioria dos pontos, o que, na teoria dos resíduos, é um indício de uma boa performance.
 
 ## 9. Deploy
 As previsões podem ser acessadas via API ou pelo aplicativo Telegram
@@ -167,5 +167,5 @@ As previsões podem ser acessadas via API ou pelo aplicativo Telegram
 ## 11. Lições Aprendidas
 
 * Aprender modelos de aprendizado de máquina é importante, entretanto, entender a questão de negócio e saber converter os erros em resultados reais é tão importante quanto.
-* Sempre existirá mais de uma forma de resolver um problema, com o conhecimento das técnicas é possível eliminar os piores, porém, para definir qual o melhor para o seu problema, é necessário testar.
+* Sempre existirá mais de uma forma de resolver um problema, com o conhecimento das técnicas é possível eliminar os piores, porém, para definir qual a melhor estratégia para resolver o problema, é necessário testar. É aqui uma das grandes vantagens do método CRISP-DS, pode-se fazer vários ciclos para testagens e sempre tendo uma entrega satisfatória em pouco tempo.
 * Aprendizado de máquina é apenas uma das funções de um cientista de dados, não a única.
