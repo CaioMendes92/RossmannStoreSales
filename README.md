@@ -5,9 +5,9 @@
 ## 1. Problema de Negócio
 O CFO da empresa fez uma reunião com todos os Gerentes de Loja e pediu para que cada um deles trouxesse uma previsão das vendas nas próximas 6 semanas.
 
-Depois dessa reunião, todos os Gerentes de Loja entraram em contato com você, requisitando uma previsão de vendas de sua loja. O seu trabalho é fazer essa previsão.
+Depois dessa reunião, todos os Gerentes de Loja entraram em contato requisitando uma previsão de vendas de sua loja. O meu trabalho é fazer essa previsão.
 
-## 2. Premissas do negócio
+## 2. Premissas do Negócio
 
 * Apenas lojas abertas serão consideradas.
 * Apenas lojas com vendas serão levadas em conta.
@@ -32,21 +32,21 @@ Depois dessa reunião, todos os Gerentes de Loja entraram em contato com você, 
 
 ## 3. Planejamento da Solução
 
-A partir do pedido do CFO e da análise dos dados, é possível observar que este é um claro problema de predição, que será usado um modelo de Machine Learning para solucioná-lo. Depois disso, será feito o deploy do modelo no Heroku, que poderá ser acessado em qualquer telefone com acesso ao aplicativo Telegram ou via requisição da API.
+A partir do pedido do CFO e da análise dos dados, é possível observar que esse é um claro problema de predição. Para solucioná-lo, será usado um modelo de Machine Learning. Depois disso, será feito o deploy do modelo, no Heroku, que poderá ser acessado em qualquer telefone com acesso ao aplicativo Telegram ou via requisição da API.
 
-Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Science) , que é um metodo de gerenciamento de projetos para ciência de dados. A vantagem deste método é que entrega-se valor de uma forma mais rápida. O processo consiste nas seguintes etapas:
+Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Science) , que é um metodo de gerenciamento de projetos para ciência de dados. A vantagem desse método é que se entrega o valor de uma forma mais rápida. O processo consiste nas seguintes etapas:
 
 **0.** Aquisição dos Dados
-* Neste nosso projeto, os dados vieram do Kaggle: https://www.kaggle.com/c/rossmann-store-sales/data
+* Nesse projeto, os dados vieram do Kaggle: https://www.kaggle.com/c/rossmann-store-sales/data
 
 **1.** Descrição dos Dados
-* A partir de métricas estatísticas encontra-se valores mínimos, máximos, outliers, médias, dados faltantes entre outros problemas que será enfrentado durante o projeto.
+* A partir de métricas estatísticas encontra-se valores mínimos, máximos, outliers, médias, dados faltantes entre outros problemas que serão enfrentado durante o projeto.
 
 **2.** Engenharia de Atributos
-* Nesta etapa será encontrado novos atributos a partir das variáveis originais, de forma que melhore a análise exploratória de dados. Além disso, cria-se hipóteses que serão validadas (ou rejeitadas) na análise.
+* Nesta etapa serão encontrados novos atributos, a partir das variáveis originais, de forma que melhore a análise exploratória de dados. Além disso, cria-se hipóteses que serão validadas (ou rejeitadas) na análise.
 
 **3.** Filtragem de Dados
-* A principal motivação para realizar este passo é por restrição de negócios. Alguns atributos podem impactar no resultado, porém, não estarão disponíveis antes do modelo em produção.
+* A principal motivação para realizar este passo é por restrição de negócios. Alguns atributos podem impactar no resultado, mas não estarão disponíveis antes do modelo em produção.
 
 **4.** Análise Exploratória de Dados
 * O objetivo de uma análise exploratória de dados (EDA - do inglês: Exploratory Data Analysis) é entender como as variáveis impactam no fenômeno a ser modelado e encontrar insights que ajudem a solucionar o problema. 
@@ -55,16 +55,16 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 * Aqui é feito a preparação dos dados para aplicar os modelos de aprendizado de máquina.
 
 **6.** Seleção de Atributos
-* Nesta etapa será selecionado as variáveis mais relevantes para o modelo. Aqui foi utilizado o Algoritmo Boruta.
+* Nesta etapa serão selecionadas as variáveis mais relevantes para o modelo. Aqui, foi utilizado o Algoritmo Boruta.
 
 **7.** Modelos de Aprendizagem de Máquina
-* Seleciona-se alguns algoritmos de aprendizagem de máquina e realiza o treinamento e o teste para observar qual modelo performa melhor.
+*	Seleciona-se alguns algoritmos de aprendizagem de máquina e realiza-se o treinamento e o teste para observar qual modelo performa melhor.
 
 **8.** Ajuste Fino de Hiperparâmetros
 * Ajuste dos hiperparâmetros de forma que o modelo de aprendizado de máquina performe ainda melhor.
 
 **9.** Interpretação de Erros e Conversão em Valores de Negócios
-* A partir do melhor modelo encontrado nos passos 7 e 8, é feito a interpretação de alguns erros e como convertê-los de forma a entender qual será o retorno financeiro para a empresa em utilizar o modelo.
+* A partir do melhor modelo encontrado nos passos 7 e 8, é feita a interpretação de alguns erros e mostra-se como convertê-los de forma a entender qual será o retorno financeiro para a empresa que utilizar o modelo.
 
 **10.** Deploy do Modelo em Produção
 * Colocar o modelo em produção no Heroku de forma que qualquer um possa utilizar a partir da requisição na API. Também acessível pelo aplicativo do Telegram.
@@ -76,7 +76,7 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/insight1.png?raw=true)
 
-É possível concluir que basic e extended tem aproximadamente o mesmo volume de vendas, mas o extra tem uma quantidade de venda menor. Considerou-se aqui que extra tem um volume maior, uma vez que não tenho tantas informações sobre o negócio.
+É possível concluir que basic e extended têm aproximadamente o mesmo volume de vendas, mas o extra tem uma quantidade de venda menor. Considerou-se aqui que extra tem um volume maior, uma vez que não tenho tantas informações sobre o negócio.
 
 **2.** Lojas com competidores mais próximos deveriam vender menos.
 * Falsa. Lojas com competidores mais próximos vendem mais.
@@ -86,7 +86,7 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 Pela lógica, se o competidor estiver mais próximo, a loja venderia menos. Porém, pelos dados, lojas com competidores mais próximos vendem mais. Isto é completamente contra qualquer senso comum.
 
 **3.** Lojas com mais promoções consecutivas deveriam vender mais.
-* Falsa Lojas com mais promoções consecutivas vendem menos.
+* Falsa. Lojas com mais promoções consecutivas vendem menos.
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/insight3a.png?raw=true)
 
@@ -97,14 +97,14 @@ Pela lógica, se o competidor estiver mais próximo, a loja venderia menos. Por�
 Pode-se observar que as vendas para a promoção tradicional + estendida foram menores.
 
 **4.** Lojas abertas durante o feriado de Natal deveriam vender mais.
-* Falsa Lojas abertas durante o feriado de Natal vendem menos.
+* Falsa. Lojas abertas durante o feriado de Natal vendem menos.
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/insight4a.png?raw=true)
 
 Vê-se que os feriados públicos tem muito mais vendas. O Natal é o feriado que vende menos e esse comportamento ocorre nos últimos anos da análise. Além disso, foi necessário remover os dias regulares pelo fato de serem muito mais dias, o que impossibilitaria uma análise precisa. No ano de 2015 não há natal, pois os dados vão até agosto de 2015.	
 
 **5.** Lojas deveriam vender mais ao longo dos anos.
-* Falsa Lojas vendem menos ao longo dos anos.
+* Falsa. Lojas vendem menos ao longo dos anos.
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/insight5.png?raw=true)
 Podemos observar uma queda de venda entre os anos. A tendência é de decaimento, mesmo levando em conta que 2015 não está com os dados fechados, é possível observar uma queda de 2013 pra 2014.
@@ -119,7 +119,7 @@ Os modelos utilizados neste passo foram:
 * Random Forest Regressor
 * XGBoost Regressor
 
-Ou seja, uma média, para servir de base de comparação, dois modelos lineares e dois não-lineares.
+Ou seja, uma média, para servir de base de comparação, dois modelos lineares e dois não lineares.
 
 ## 6. Performance dos modelos de machine learning
 
@@ -149,10 +149,10 @@ O gráfico abaixo mostra, para cada loja, o erro percentual e a predição. É p
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/ML_performance.png?raw=true)
 
-* Em (1,1), é possível ver que as predições das lojas estão bem próximas do resultado de teste ao longo do tempo, o que é um indicativo que o modelo performou bem.
+* Em (1,1) é possível ver que as predições das lojas estão bem próximas do resultado de teste ao longo do tempo, o que é um indicativo de que o modelo performou bem.
 * Em (1,2) é a porcentagem das previsões em relação a venda, a error_rate. Acima da linha 1, o modelo superestiou o resultado, abaixo ele subestimou.
-* Em (2,1) vê-se que o erro tem uma distribuição bem próxima de uma normal, isso é importante pois é um indicativo que os erros estão próximos de 0.
-* Em (2,2) é possível ver que previsões entre valores de 5k e 10k tem os maiores erros. Em termos da análise de resíduo, o modelo está como um "tubo" na maioria dos pontos, o que, na teoria dos resíduos, é um indício de uma boa performance.
+* Em (2,1) vê-se que o erro tem uma distribuição bem próxima de uma normal; isso é importante pois é um indicativo de que os erros estão próximos de 0.
+* Em (2,2) é possível ver que previsões entre valores de 5k e 10k têm os maiores erros. Em termos da análise de resíduo, o modelo está como um "tubo" na maioria dos pontos, o que, na teoria dos resíduos, é um indício de uma boa performance.
 
 ## 9. Deploy
 As previsões podem ser acessadas via API ou pelo aplicativo Telegram
@@ -161,11 +161,11 @@ As previsões podem ser acessadas via API ou pelo aplicativo Telegram
 * Para acessar via telegram: https://t.me/rossmann_caio_bot
 
 ## 10. Conclusões
-* A partir da taxa de erro podemos considerar que o resultado encontrado aqui é satisfatório, uma vez que o erro é de 11% para mais ou para menos, em algumas lojas sendo este erro ainda menor. 
+* A partir da taxa de erro, podemos considerar que o resultado encontrado aqui é satisfatório, uma vez que o erro é de 11% para mais ou para menos, em algumas lojas, sendo esse erro ainda menor.
 * Verificou-se também que o modelo tende a subestimar o valor das previsões em 1,9%.
 
 ## 11. Lições Aprendidas
 
-* Aprender modelos de aprendizado de máquina é importante, entretanto, entender a questão de negócio e saber converter os erros em resultados reais é tão importante quanto.
-* Sempre existirá mais de uma forma de resolver um problema, com o conhecimento das técnicas é possível eliminar os piores, porém, para definir qual a melhor estratégia para resolver o problema, é necessário testar. É aqui uma das grandes vantagens do método CRISP-DS, pode-se fazer vários ciclos para testagens e sempre tendo uma entrega satisfatória em pouco tempo.
+* Aprender modelos de aprendizado de máquina é importante. Entretanto, entender a questão de negócio e saber converter os erros em resultados reais é tão importante quanto.
+* Sempre existirá mais de uma forma de resolver um problema. Com o conhecimento das técnicas, é possível eliminar as piores estratégias. Porém, para definir qual a melhor estratégia para resolver o problema, é necessário testar. É aqui que está uma das grandes vantagens do método CRISP-DS: pode-se fazer vários ciclos para testagens e sempre tendo uma entrega satisfatória em pouco tempo.
 * Aprendizado de máquina é apenas uma das funções de um cientista de dados, não a única.
