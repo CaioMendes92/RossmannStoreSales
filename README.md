@@ -123,7 +123,7 @@ Ou seja, uma média, para servir de base de comparação, dois modelos lineares 
 
 ## 6. Performance dos modelos de machine learning
 
-Como o problema tem uma ordem cronológica, é importante utilizar a técnica de Time Series Cross-Validation, de forma a ver a real performance de cada modelo e levar em conta a variável temporal do problema. A performance foi avaliada a partir do Erro Médio Absoluto (MAE), Erro Percentual Médio Absoluto (MAPE) e a Raiz Quadrada do Erro-Médio (RMSE). A performance real dos modelos é dada pela média dos erros +/- o desvio padrão do erro
+Como o problema tem uma ordem cronológica, é importante utilizar a técnica de Time Series Cross-Validation, de forma a ver a real performance de cada modelo e levar em conta a variável temporal do problema. A performance foi avaliada a partir do Erro Médio Absoluto (MAE), Erro Percentual Médio Absoluto (MAPE) e a Raiz Quadrada do Erro-Médio (RMSE). A performance real dos modelos é dada pela média dos erros +/- o desvio padrão do erro,
 
 ![alt text](https://github.com/CaioMendes92/RossmannStoreSales/blob/main/img/modelos_cv.png?raw=true)
 
