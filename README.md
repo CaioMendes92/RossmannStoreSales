@@ -42,7 +42,7 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 **1.** Descrição dos Dados
 * A partir de métricas estatísticas encontra-se valores mínimos, máximos, outliers, médias, dados faltantes entre outros problemas que serão enfrentado durante o projeto.
 
-**2.** Engenharia de Atributos
+**2.** Feature Engineering
 * Nesta etapa serão encontrados novos atributos, a partir das variáveis originais, de forma que melhore a análise exploratória de dados. Além disso, cria-se hipóteses que serão validadas (ou rejeitadas) na análise.
 
 **3.** Filtragem de Dados
@@ -57,10 +57,10 @@ Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Scien
 **6.** Seleção de Atributos
 * Nesta etapa serão selecionadas as variáveis mais relevantes para o modelo. Aqui, foi utilizado o Algoritmo Boruta.
 
-**7.** Modelos de Aprendizagem de Máquina
+**7.** Modelos de Machine Learning
 *	Seleciona-se alguns algoritmos de aprendizagem de máquina e realiza-se o treinamento e o teste para observar qual modelo performa melhor.
 
-**8.** Ajuste Fino de Hiperparâmetros
+**8.** Ajuste Fino dos Hiperparâmetros
 * Ajuste dos hiperparâmetros de forma que o modelo de aprendizado de máquina performe ainda melhor.
 
 **9.** Interpretação de Erros e Conversão em Valores de Negócios
