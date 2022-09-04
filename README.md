@@ -34,7 +34,7 @@ Depois dessa reunião, todos os Gerentes de Loja entraram em contato requisitand
 
 A partir do pedido do CFO e da análise dos dados, é possível observar que esse é um claro problema de predição. Para solucioná-lo, será usado um modelo de Machine Learning. Depois disso, será feito o deploy do modelo, no Heroku, que poderá ser acessado em qualquer telefone com acesso ao aplicativo Telegram ou via requisição da API.
 
-Será utilizado o método cíclico CRISP-DS (Cross-Industry Process - Data Science) , que é um metodo de gerenciamento de projetos para ciência de dados. A vantagem desse método é que se entrega o valor de uma forma mais rápida. O processo consiste nas seguintes etapas:
+Será utilizado o método cíclico CRISP-DM (Cross-Industry Process), que é um metodo de gerenciamento de projetos para ciência de dados. A vantagem desse método é que se entrega o valor de uma forma mais rápida. O processo consiste nas seguintes etapas:
 
 **0.** Aquisição dos Dados
 * Nesse projeto, os dados vieram do Kaggle: https://www.kaggle.com/c/rossmann-store-sales/data
